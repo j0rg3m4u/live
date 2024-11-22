@@ -17,3 +17,10 @@ spec:
         image: postgres:latest
         ports:
         - containerPort: 5432
+        env:
+           - name: POSTGRES_PASSWORD
+           - value: KDcpxbL34qhY5rvy
+           - name: POSTGRES_USER
+           - value: live
+           - name: POSTGRES_DB
+           - value: live_config
