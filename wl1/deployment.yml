@@ -17,6 +17,8 @@ spec:
         image: postgres:latest
         ports:
         - containerPort: 5432
+          protocol: TCP
+
         env:
            - name: POSTGRES_PASSWORD
              value: KDcpxbL34qhY5rvy
