@@ -2,62 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   namespace: local-live
-  name: live
+  name: postgresql
 spec:
   selector:
     matchLabels:
-      app: live
-  replicas: 1
+      app: posgresql
   template:
     metadata:
       labels:
-        app: live
+        app: posgresql
     spec:
-      # volumes:
-      #   - name: live-license-config
-      #     configMap:
-      #       name: technip-live-cm
-      #       items:
-      #       - key: "license.lic"
-      #         path: "license.lic"
-      #   - name: live-ssd-mount
-      #     persistentVolumeClaim:
-      #       claimName: technip-live-ssd
-      #   - name: live-plugins-mount
-      #     persistentVolumeClaim:
-      #       claimName: technip-live-plugins
-      #   - name: technip-live-conf-mount
-      #     persistentVolumeClaim:
-      #       claimName: technip-live-conf
-      #   - name: mariadb-data-mount
-      #     persistentVolumeClaim:
-      #       claimName: technip-mariadb-data
       containers:
-        - name: postgresql
-          image: postgresq:latest
-          ports:
-            - containerPort: 5432
-          resources:
-            requests:
-              memory: "700Mi"
-              cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "500m"
-          env:
-           - name: POSTGRES_PASSWORD
-           - value: KDcpxbL34qhY5rvy
-           - name: POSTGRES_USER
-           - value: live
-           - name: POSTGRES_DB
-           - value: live_config
-
-        - name: live
-          imagePullPolicy: Always
-          image: intelie.azurecr.io/live:3.50.0
-          ports:
-            - containerPort: 8080
-            - containerPort: 17042
-              protocol: TCP
-            - containerPort: 6000
-              protocol: TCP
+      - name: postgresql
+        image: postgres:latest
+        ports:
+        - containerPort: 5432
