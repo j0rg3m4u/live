@@ -23,7 +23,7 @@ spec:
              value: KDcpxbL34qhY5rvy
            - name: MARIADB_USER
              value: live
-           - name: MARIADB_ROOT PASSWORD
+           - name: MARIADB_ROOT_PASSWORD
              value: KDcpxbL34qhY5rvy
            - name: MARIADB_DATABASE
              value: live
