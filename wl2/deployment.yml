@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: local-live2
+  name: mariadb
+spec:
+  selector:
+    matchLabels:
+      app: mariadb
+  template:
+    metadata:
+      labels:
+        app: mariadb
+    spec:
+      containers:
+      - name: mariadb
+        image: mariadb:latest
+        ports:
+        - containerPort: 3306
+          protocol: TCP
+
+        env:
+           - name: MARIADB_PASSWORD
+             value: KDcpxbL34qhY5rvy
+           - name: MARIADB_USER
+             value: live
+           - name: MARIADB_ROOT PASSWORD
+             value: KDcpxbL34qhY5rvy
+           - name: MARIADB_DATABASE
+             value: live
