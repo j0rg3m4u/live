@@ -7,7 +7,7 @@ spec:
   selector:
     matchLabels:
       app: mariadb
-   template:
+  template:
     metadata:
       labels:
         app: mariadb
