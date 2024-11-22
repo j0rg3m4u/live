@@ -19,8 +19,8 @@ spec:
         - containerPort: 5432
         env:
            - name: POSTGRES_PASSWORD
-           - value: KDcpxbL34qhY5rvy
+             value: KDcpxbL34qhY5rvy
            - name: POSTGRES_USER
-           - value: live
+             value: live
            - name: POSTGRES_DB
-           - value: live_config
+             value: live_config
