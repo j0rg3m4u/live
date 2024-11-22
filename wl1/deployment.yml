@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webpage
+  name: postgresql
 spec:
   selector:
     matchLabels:
-      app: webpage
+      app: posgresql
   template:
     metadata:
       labels:
-        app: webpage
+        app: posgresql
     spec:
       containers:
-      - name: webpage
-        image: fabricioveronez/pagina-exemplo:blue
+      - name: postgresql
+        image: postgresql:latest
         ports:
-        - containerPort: 80
+        - containerPort: 5432
 # ---
 # apiVersion: v1
 # kind: Service
