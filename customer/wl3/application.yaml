@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: client3-app
+  namespace: argocd
+spec:
+  project: local
+  source:
+    repoURL: https://github.com/seu-repo/live.git
+    path: customer/wl3
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: live-laminar
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
