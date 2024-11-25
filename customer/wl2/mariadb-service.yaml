@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Service
+metadata:
+  name: mariadb
+  namespace: client2
+spec:
+  selector:
+    matchLabels:
+      app: mariadb
+  ports:
+    - name: mariadb  
+      protocol: TCP
+      port: 3306
+      targetPort: 3306
+      protocol: TCP
+
+  type: NodePort
