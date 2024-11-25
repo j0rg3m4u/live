@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Service
 metadata:
-  name: live-laminar-service
+  name: live-service
   namespace: live-laminar
   labels:
     app: live-laminar
