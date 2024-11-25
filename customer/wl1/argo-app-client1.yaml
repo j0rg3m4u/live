@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: local
+  namespace: argocd
+spec:
+  project: local
+  source:
+    repoURL: https://github.com/j0rg3m4u/live.git
+    path: customer/wl1
+    targetRevision: HEAD
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: client1
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true
