@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: local-live
+  namespace: client1
   name: postgresql
 spec:
   selector:

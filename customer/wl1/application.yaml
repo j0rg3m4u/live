@@ -11,7 +11,7 @@ spec:
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: local-live
+    namespace: client1
   syncPolicy:
     automated:
       prune: true
