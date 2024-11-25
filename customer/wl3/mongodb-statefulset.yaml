@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: mongodb
-  namespace: local-live2
+  namespace: live-laminar
 spec:
   serviceName: mongodb-service
   replicas: 3

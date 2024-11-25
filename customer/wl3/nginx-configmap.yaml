@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: local-live2
+  namespace: live-laminar
 data:
   default.conf: |
     server {

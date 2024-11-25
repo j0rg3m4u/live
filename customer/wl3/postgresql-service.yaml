@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Service
 metadata:
   name: postgresql
-  namespace: local-live2
+  namespace: live-laminar
 spec:
   type: NodePort
   ports:

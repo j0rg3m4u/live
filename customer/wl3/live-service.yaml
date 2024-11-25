@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Service
 metadata:
   name: live-laminar-service
-  namespace: local-live2
+  namespace: live-laminar
   labels:
     app: live-laminar
 spec:
