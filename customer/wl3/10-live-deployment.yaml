@@ -4,7 +4,7 @@ metadata:
   name: live-laminar
   namespace: client3
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: live-laminar
@@ -16,6 +16,8 @@ spec:
       containers:
       - name: live-laminar
         image: intelie.azurecr.io/live:3.51.0
+        imagePullSecrets:
+          - name: acr-secret
         ports:
         - containerPort: 8080
         env:
