@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: live-laminar
-        image: seu-repo/java-app:latest
+        image: intelie.azurecr.io/live:3.51.0
         ports:
         - containerPort: 8080
         env:
