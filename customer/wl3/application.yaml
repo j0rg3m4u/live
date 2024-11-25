@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: client3-app
-  namespace: argocd
+  namespace: live-laminar
 spec:
   project: local
   source:
