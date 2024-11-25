@@ -5,7 +5,8 @@ metadata:
   namespace: client1
 spec:
   selector:
-    app: posgresql
+    matchLabels:
+      app: posgresql
   ports:
     - name: postgresql  
       protocol: TCP
