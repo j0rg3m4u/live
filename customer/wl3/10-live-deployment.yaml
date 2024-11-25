@@ -2,9 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: live-laminar
-  namespace: live-laminar
-  labels:
-    app: live-laminar
+  namespace: client3
 spec:
   replicas: 2
   selector:
